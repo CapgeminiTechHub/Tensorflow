@@ -20,7 +20,12 @@ conda install -c conda-forge tensorflow
 pip install numpy
 pip install matplotlib
 ```
+This installation can be tested by running the command:
+```
+python -c "import tensorflow as tf; import numpy as np; import matplotlib as plt; print('Its Alive!')"
+```
 
+If "Its Alive!" appears in the console the installation was successfull.
 
 ## Tutorials:
 
