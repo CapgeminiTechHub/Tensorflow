@@ -4,7 +4,7 @@ Repository for Tensorflow and ANN Tutorials
 To run Tensorflow you must have a Python environment set up on your machine.
 
 
-## Installtion guides:
+## Installtion guides
 
 ### Windows:
 
@@ -27,7 +27,11 @@ python -c "import tensorflow as tf; import numpy as np; import matplotlib as plt
 
 If "Its Alive!" appears in the console the installation was successfull.
 
-## Tutorials:
+
+
+
+
+## Tutorials
 
 ### MNIST:
 mnist_tutorial.py - a basic tutorial that builds a simple softmax network for classifying the MNIST dataset.
