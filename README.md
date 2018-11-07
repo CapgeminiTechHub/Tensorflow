@@ -13,13 +13,13 @@ A python environment is needed to run Tensorflow. There a various ways of settin
 The most straightforward way I have found is to install [Anaconda](https://www.anaconda.com/download/).
 
 Then install tensorflow by running the following commands:
-'''
+```
 conda create --name tensorflow python=3.5 
 activate tensorflow
 conda install -c conda-forge tensorflow 
 pip install numpy
 pip install matplotlib
-'''
+```
 
 
 ## Tutorials:
