@@ -16,7 +16,8 @@ Then install tensorflow by running the following commands:
 ```
 conda create --name tensorflow python=3.5 
 activate tensorflow
-conda install -c conda-forge tensorflow 
+conda install -c conda-forge tensorflow
+python -m pip install --upgrade pip
 pip install numpy
 pip install matplotlib
 ```
