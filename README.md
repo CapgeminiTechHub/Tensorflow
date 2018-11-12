@@ -44,5 +44,4 @@ spyder
 ## Tutorials
 
 ### MNIST:
-mnist_tutorial.py - a basic tutorial that builds a simple softmax network for classifying the MNIST dataset.
-mnist_tutorial_visualisation.py - visualises the learning of the network.
+An introductory course into tensorflow. Uses the MNIST dataset to train a simple (single layer) sigmoid network on handwritten digit recognition.
