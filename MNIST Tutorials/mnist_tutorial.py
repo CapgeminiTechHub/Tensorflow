@@ -91,16 +91,16 @@ show_weight_plot()
 
 #Testing the Model
 def run_trained_model(num):
-    print('\nTest Number ' + str(num))
     test_num = ran.randint(0, x_test.shape[0])
     display_test_digit(test_num)    
-    #runs the model on the random member of the test group, and turns it into a string 
     m_output = np.array(sess.run(model_output, {inputs: x_test[test_num].reshape(1, 784)}).reshape(10)).tolist()
     maxpos = m_output.index(max(m_output))
     print('Model Output: ' + str(m_output))
     print('Prediction: ' + str(maxpos))
 
-for i in range(1,6):
+for i in range(0,5):
+    alphabet = ['A','B','C','D','E','F']
+    print('\nTest ' + alphabet[i])
     run_trained_model(i)
     input("Press [enter] to continue.")
 
@@ -119,11 +119,18 @@ print("\n\nSo long and thanks for all the fish!")
 #Softmaxreplace line 61
 model_output = tf.nn.softmax(tf.matmul(inputs,weights))
 
-#Softmax and Bias: replace line 61 & comment out 'show_weight_plot'
+#Softmax and Bias: replace line 61 
 bias = tf.Variable(tf.zeros([10]))
 model_output = tf.nn.softmax(tf.matmul(inputs,weights) + bias)
 
-#Multilayer, Softmax, and Bias: replace lines 55-61
+#ReLu: replace line 61 
+bias = tf.Variable(tf.zeros([10]))
+model_output = tf.nn.softmax(tf.matmul(inputs,weights) + bias)
+#This model will not work initially. Have a look at the ReLu activation function, think about gradient descent, and try work out why it isn't working. There's a simple change that will get it working. Hint: have a look at the below models.
+
+##DEEP MODELS##
+
+#Multilayer, Softmax, and Bias: replace lines 55-61 & comment out 'show_weight_plot'
 inputs = tf.placeholder(tf.float32, shape=[None, 784])
 target = tf.placeholder(tf.float32, shape=[None, 10])
 
@@ -139,6 +146,8 @@ l2_output = tf.nn.sigmoid(tf.matmul(l1_output,weights_l2) + bias_l2)
 model_output = tf.nn.softmax(tf.matmul(l2_output,weights_l3) + bias_l3)
 
 #Convolutional
+
+
 
 
 

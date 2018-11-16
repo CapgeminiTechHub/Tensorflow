@@ -138,13 +138,10 @@ target = tf.placeholder(tf.float32, shape=[None, 10])
 
 #Variables are the trainable dimensions of the model - the weights and the threshold.
 weights = tf.Variable(tf.zeros([784,10]))
-#bias = tf.Variable(tf.zeros([10]))
 #We currently initialise all these learning variables as Zero - we could also initialise them as a random number to create different starting conditions.
 
 #The Model:
 model_output = tf.nn.sigmoid(tf.matmul(inputs,weights))
-#model_output = tf.nn.sigmoid(tf.matmul(inputs,weights) + bias)
-#model = tf.nn.softmax(tf.matmul(inputs,weights) + bias)
 
 
 '''

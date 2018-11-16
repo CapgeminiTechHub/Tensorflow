@@ -43,7 +43,7 @@ def TEST_SIZE(num):
 '''
     We've set up some sets of data for us to use in training and testing. Now however lets actually have a look at the data.
 
-    Each data point(???) in this database consist of a 28x28 pixel picture of a handwritten digit (0-9), and a label denoting w. 
+    Each data point in this database consist of a 28x28 pixel picture of a handwritten digit (0-9), and a label denoting w. 
     
     Originally (NIST database) simply consisted of black and white pixels, they now contain greyscale due to the normalisation and anti-aliasing technique used. However even so this image can be represented as a 784 long array (list)
     

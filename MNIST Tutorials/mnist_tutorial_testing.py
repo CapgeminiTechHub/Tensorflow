@@ -251,16 +251,16 @@ for i in range(TRAIN_STEPS+1):
 #update the weight visualisation - lets see what all the weights look like now
 show_weight_plot()
 
+
 '''
 Testing the Model
 
-Normally testing would be a rigorous procedure to ascertain whether the model has successfully learnt and generalised.
+Normally testing would be a rigorous unbiased procedure to ascertain whether the model has successfully learnt and generalised.
 
 However as this is simply a tutorial our testing will merely consist of us randomly picking 5 examples, and seeing if the model gets the correct prediction.
 '''
 #Testing the Model
 def run_trained_model(num):
-    print('\nTest Number ' + str(num))
     test_num = ran.randint(0, x_test.shape[0])
     display_test_digit(test_num)    
     #runs the model on the random member of the test group, and turns it into a string 
@@ -269,7 +269,9 @@ def run_trained_model(num):
     print('Model Output: ' + str(m_output))
     print('Prediction: ' + str(maxpos))
 
-for i in range(1,6):
+for i in range(0,5):
+    alphabet = ['A','B','C','D','E','F']
+    print('\nTest ' + alphabet[i])
     run_trained_model(i)
     input("Press [enter] to continue.")
 
